@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SolveUsingCompletableFuture.iml" filepath="$PROJECT_DIR$/.idea/modules/SolveUsingCompletableFuture.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SolveUsingCompletableFuture_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SolveUsingCompletableFuture_main.iml" group="SolveUsingCompletableFuture" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SolveUsingCompletableFuture_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SolveUsingCompletableFuture_test.iml" group="SolveUsingCompletableFuture" />
     </modules>
   </component>
 </project>
