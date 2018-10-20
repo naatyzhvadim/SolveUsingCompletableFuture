@@ -5,6 +5,18 @@ public class QuadraticEquation {
         this.b = b;
         this.c = c;
     }
+
+    public Solution getSolution() {
+        double d = b * b - 4 * a * c;
+        System.out.println("SOLVING");
+        /*if (d >= 0) {
+            return new Solution((-b + Math.sqrt(d))/(2 * a), (-b - Math.sqrt(d))/(2 * a));
+        } else {
+
+        }*/
+        return null;
+    }
+
     public double getA() {
         return a;
     }
@@ -23,5 +35,4 @@ public class QuadraticEquation {
     public void setC(double c) {
         this.c = c;
     }
-
 }
