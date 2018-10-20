@@ -37,16 +37,16 @@ public class GeneratorOfQuadrEq {
         double radius = 200;
         generator.getEquation(radius);
 
-        int numberOfEquations = 50;
+        int numberOfEquations = 5000000;
         QuadraticEquation[] equations = new QuadraticEquation[numberOfEquations];
         for (int i = 0; i < numberOfEquations; ++i) {
             equations[i] = generator.getEquation(radius);
         }
 
-        int numberOfExecutors = 8;
+        int numberOfExecutors = 20;
 
         //Creating thread pool
-        Executor executor = Executors.newFixedThreadPool(numberOfExecutors);
+        ExecutorService executor = Executors.newFixedThreadPool(numberOfExecutors);
 
         //Creating list of equations from array
         List<QuadraticEquation> listEquations = Arrays.asList(equations);
@@ -64,12 +64,11 @@ public class GeneratorOfQuadrEq {
                 listSolutions.stream().map(oneSolution ->
                         oneSolution.join()).collect(Collectors.toList()));
 
+        //There is result list of solutions
         List<Solution> resultList = allSolutions.join();
-        Iterator<Solution> iterator = resultList.iterator();
-        while (iterator.hasNext()){
-            Solution solution = iterator.next();
-            solution.printSolution();
-        }
+
+        //Need to stop executor
+        executor.shutdown();
 
         long timeSpent = System.currentTimeMillis() - startTime;
 
